@@ -15,9 +15,9 @@ add('writable_dirs', []);
 // Hosts
 
 host('zircon')
-    ->hostname('w0192e57.kasserver.com')
-    ->set('remote_user', 'ssh-w01dd476')
-    ->set('deploy_path', '~/deploy-test');
+    ->setHostname('w0192e57.kasserver.com')
+    ->setRemoteUser('ssh-w01dd476')
+    ->setDeployPath('~/deploy-test');
 
 // Hooks
 
