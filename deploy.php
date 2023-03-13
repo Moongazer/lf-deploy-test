@@ -17,7 +17,8 @@ add('writable_dirs', []);
 host('zircon')
     ->setHostname('w0192e57.kasserver.com')
     ->setRemoteUser('ssh-w01dd476')
-//    ->set('http_user', 'w01dd476') // @todo: why?
+    //->set('http_user', 'w01dd476') // @todo: why?
+    ->set('branch', 'deploy/symfony')
     ->set('deploy_path', '/www/htdocs/w01dd476')
     ->set('writable_mode', 'chmod'); // for shared-host environments where ACL isn't available/installable
 
