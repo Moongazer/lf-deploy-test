@@ -8,7 +8,7 @@ require 'recipe/symfony.php';
 
 set('repository', 'https://github.com/Moongazer/lf-deploy-test.git'); // git@github.com:Moongazer/lf-deploy-test.git
 
-add('shared_files', []);
+add('shared_files', ['.env.prod']);
 add('shared_dirs', []);
 add('writable_dirs', []);
 
