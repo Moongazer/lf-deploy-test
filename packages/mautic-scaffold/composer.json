@@ -1,0 +1,18 @@
+{
+  "name": "lehner/mautic-scaffold",
+  "description": "Lehner Mautic project scaffold",
+  "type": "project",
+  "license": "proprietary",
+  "config": {
+    "sort-packages": true
+  },
+  "require": {},
+  "require-dev": {},
+  "extra": {
+    "mautic-scaffold": {
+      "file-mapping": {
+        "[project-root]/.gitignore": "scaffold/files/project.gitignore"
+      }
+    }
+  }
+}

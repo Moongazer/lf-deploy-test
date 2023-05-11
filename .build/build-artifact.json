@@ -1,0 +1,268 @@
+{
+    "artifact": {
+        "version": 1,
+        "file": ".build/build-artifact.json",
+        "date": 1683393040
+    },
+    "template": {
+        "identifier": "leuchtfeuer/mautic-project-template",
+        "hash": "e13290353bc758ede42e81d1d8330543aabddd16",
+        "package": {
+            "name": "leuchtfeuer/mautic-project-template",
+            "version": "9999999-dev",
+            "sourceReference": "e4d5412db599c032377d9d85dccd3e5850eaefe5",
+            "sourceUrl": "git@github.com:Leuchtfeuer/mautic-project-template.git",
+            "distUrl": "https://api.github.com/repos/Leuchtfeuer/mautic-project-template/zipball/e4d5412db599c032377d9d85dccd3e5850eaefe5"
+        },
+        "provider": {
+            "name": "VCS repository (e.g. GitHub)",
+            "url": "git@github.com:Leuchtfeuer/mautic-project-template.git"
+        }
+    },
+    "generator": {
+        "package": {
+            "name": "cpsit/project-builder",
+            "version": "2.2.1.0",
+            "sourceReference": null,
+            "sourceUrl": null,
+            "distUrl": null
+        },
+        "executor": "composer"
+    },
+    "result": {
+        "properties": {
+            "project": {
+                "customer_name": "Lehner",
+                "name": "Lehner Mautic",
+                "vendor": "Leuchtfeuer",
+                "package_name": "leuchtfeuer/mautic-lehner-site"
+            },
+            "packages": {
+                "mautic": "4.4",
+                "php": "7.4"
+            },
+            "features": {
+                "phpstan": false,
+                "rector": false
+            },
+            "ddev": {
+                "name": "lehner-mautic",
+                "webserver_type": "Apache",
+                "db_driver": "MariaDB",
+                "db_version": "10.4"
+            },
+            "author": {
+                "name": "Leuchtfeuer",
+                "email": "dev@leuchtfeuer.com"
+            }
+        },
+        "steps": [
+            {
+                "type": "collectBuildInstructions",
+                "applied": true
+            },
+            {
+                "type": "processSourceFiles",
+                "applied": true
+            },
+            {
+                "type": "generateBuildArtifact",
+                "applied": true
+            },
+            {
+                "type": "mirrorProcessedFiles",
+                "applied": true
+            },
+            {
+                "type": "showNextSteps",
+                "applied": true
+            }
+        ],
+        "processedFiles": [
+            {
+                "source": ".ddev/config.yaml.twig",
+                "target": ".ddev/config.yaml"
+            },
+            {
+                "source": ".ddev/local.config.php.dist",
+                "target": ".ddev/local.config.php.dist"
+            },
+            {
+                "source": ".ddev/mautic-setup.sh",
+                "target": ".ddev/mautic-setup.sh"
+            },
+            {
+                "source": ".editorconfig.twig",
+                "target": ".editorconfig"
+            },
+            {
+                "source": ".gitignore.twig",
+                "target": ".gitignore"
+            },
+            {
+                "source": "README.md.twig",
+                "target": "README.md"
+            },
+            {
+                "source": "composer.json.twig",
+                "target": "composer.json"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Assets/img/icon.png",
+                "target": "packages/mautic-plugin-customization/Assets/img/icon.png"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Config/config.php.twig",
+                "target": "packages/mautic-plugin-customization/Config/config.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Config/customfields.php",
+                "target": "packages/mautic-plugin-customization/Config/customfields.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/EventListener/InstallUpdateSubscriber.php",
+                "target": "packages/mautic-plugin-customization/EventListener/InstallUpdateSubscriber.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Integration/Config.php",
+                "target": "packages/mautic-plugin-customization/Integration/Config.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Integration/MauticCustomizationIntegration.php.twig",
+                "target": "packages/mautic-plugin-customization/Integration/MauticCustomizationIntegration.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Integration/Support/ConfigSupport.php",
+                "target": "packages/mautic-plugin-customization/Integration/Support/ConfigSupport.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/MauticCustomizationBundle.php",
+                "target": "packages/mautic-plugin-customization/MauticCustomizationBundle.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/README.md.twig",
+                "target": "packages/mautic-plugin-customization/README.md"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Translations/en_US/messages.ini",
+                "target": "packages/mautic-plugin-customization/Translations/en_US/messages.ini"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/composer.json.twig",
+                "target": "packages/mautic-plugin-customization/composer.json"
+            },
+            {
+                "source": "packages/mautic-scaffold/README.md",
+                "target": "packages/mautic-scaffold/README.md"
+            },
+            {
+                "source": "packages/mautic-scaffold/composer.json.twig",
+                "target": "packages/mautic-scaffold/composer.json"
+            },
+            {
+                "source": "packages/mautic-scaffold/scaffold/files/project.gitignore",
+                "target": "packages/mautic-scaffold/scaffold/files/project.gitignore"
+            },
+            {
+                "source": "patches/composer.patches.json",
+                "target": "patches/composer.patches.json"
+            },
+            {
+                "source": "phpunit.xml",
+                "target": "phpunit.xml"
+            },
+            {
+                "source": ".ddev/config.yaml",
+                "target": ".ddev/config.yaml"
+            },
+            {
+                "source": ".ddev/local.config.php.dist",
+                "target": ".ddev/local.config.php.dist"
+            },
+            {
+                "source": ".ddev/mautic-setup.sh",
+                "target": ".ddev/mautic-setup.sh"
+            },
+            {
+                "source": ".editorconfig",
+                "target": ".editorconfig"
+            },
+            {
+                "source": ".gitignore",
+                "target": ".gitignore"
+            },
+            {
+                "source": "README.md",
+                "target": "README.md"
+            },
+            {
+                "source": "composer.json",
+                "target": "composer.json"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Assets/img/icon.png",
+                "target": "packages/mautic-plugin-customization/Assets/img/icon.png"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Config/config.php",
+                "target": "packages/mautic-plugin-customization/Config/config.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Config/customfields.php",
+                "target": "packages/mautic-plugin-customization/Config/customfields.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/EventListener/InstallUpdateSubscriber.php",
+                "target": "packages/mautic-plugin-customization/EventListener/InstallUpdateSubscriber.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Integration/Config.php",
+                "target": "packages/mautic-plugin-customization/Integration/Config.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Integration/MauticCustomizationIntegration.php",
+                "target": "packages/mautic-plugin-customization/Integration/MauticCustomizationIntegration.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Integration/Support/ConfigSupport.php",
+                "target": "packages/mautic-plugin-customization/Integration/Support/ConfigSupport.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/MauticCustomizationBundle.php",
+                "target": "packages/mautic-plugin-customization/MauticCustomizationBundle.php"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/README.md",
+                "target": "packages/mautic-plugin-customization/README.md"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/Translations/en_US/messages.ini",
+                "target": "packages/mautic-plugin-customization/Translations/en_US/messages.ini"
+            },
+            {
+                "source": "packages/mautic-plugin-customization/composer.json",
+                "target": "packages/mautic-plugin-customization/composer.json"
+            },
+            {
+                "source": "packages/mautic-scaffold/README.md",
+                "target": "packages/mautic-scaffold/README.md"
+            },
+            {
+                "source": "packages/mautic-scaffold/composer.json",
+                "target": "packages/mautic-scaffold/composer.json"
+            },
+            {
+                "source": "packages/mautic-scaffold/scaffold/files/project.gitignore",
+                "target": "packages/mautic-scaffold/scaffold/files/project.gitignore"
+            },
+            {
+                "source": "patches/composer.patches.json",
+                "target": "patches/composer.patches.json"
+            },
+            {
+                "source": "phpunit.xml",
+                "target": "phpunit.xml"
+            }
+        ]
+    }
+}

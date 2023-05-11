@@ -1,0 +1,43 @@
+# ignore common files
+.DS_Store
+/.idea/
+
+# ignore local build files
+/.build/*
+!/.build/build-artifact.json
+
+# test files
+/.php-cs-fixer.cache
+/.phpunit.result.cache
+
+# ignore everything what is installed via Mautic's recommended-project except custom modifications
+/.env*
+/autoload.php
+/Gruntfile.js
+/package.json
+/package-lock.json
+
+/app/
+/bin/
+/docroot/app/*
+
+!/docroot/app/config
+/docroot/app/config/*
+!/docroot/app/config/local.php
+
+/docroot/media/
+/docroot/plugins/
+/docroot/themes/
+/docroot/translations/
+/docroot/var/
+/docroot/.htaccess
+/docroot/autoload.php
+/docroot/favicon.ico
+/docroot/index.php
+/docroot/index_dev.php
+/docroot/offline.php
+/docroot/robots.txt
+/docroot/upgrade.php
+
+/var
+/vendor

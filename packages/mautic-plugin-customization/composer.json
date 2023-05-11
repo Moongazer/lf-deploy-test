@@ -1,0 +1,14 @@
+{
+	"name": "lehner/mautic-plugin-customization",
+	"description": "This plugin customizes Mautic for the requirements of Lehner",
+	"license": "proprietary",
+	"type": "mautic-plugin",
+	"keywords": ["mautic", "plugin"],
+	"extra": {
+		"install-directory-name": "MauticCustomizationBundle"
+	},
+	"minimum-stability": "dev",
+	"require": {
+		"mautic/core-lib": "^4.0"
+	}
+}
