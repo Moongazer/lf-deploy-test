@@ -10,13 +10,22 @@ use Mautic\PluginBundle\Entity\Integration;
 
 class Config
 {
+    /**
+     * @var IntegrationsHelper
+     */
     private IntegrationsHelper $integrationsHelper;
 
+    /**
+     * @param IntegrationsHelper $integrationsHelper
+     */
     public function __construct(IntegrationsHelper $integrationsHelper)
     {
         $this->integrationsHelper = $integrationsHelper;
     }
 
+    /**
+     * @return bool
+     */
     public function isPublished(): bool
     {
         try {

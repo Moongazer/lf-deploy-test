@@ -12,8 +12,8 @@ class MauticCustomizationIntegration extends BasicIntegration implements BasicIn
 {
     use ConfigurationTrait;
 
-    public const INTEGRATION_NAME = 'Lehner Customization';
-    public const DISPLAY_NAME = 'Lehner Customization';
+    public const INTEGRATION_NAME = 'mauticcustomization';
+    public const DISPLAY_NAME = 'Lehner Mautic Customization';
 
     public function getName(): string
     {

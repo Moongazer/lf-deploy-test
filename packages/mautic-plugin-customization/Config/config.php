@@ -11,7 +11,7 @@ return [
     'menu' => [],
     'services' => [
         'events'  => [
-            'mautic.customization.pluginbundle.subscriber' => [
+            'mautic.plugin.mauticcustomization.pluginevents.subscriber' => [
                 'class' => \MauticPlugin\MauticCustomizationBundle\EventListener\InstallUpdateSubscriber::class,
                 'arguments' => [
                     'mautic.model.factory',
@@ -19,12 +19,33 @@ return [
                 ],
             ],
         ],
-        'integrations' => [],
+        'integrations' => [
+            'mautic.integration.mauticcustomization' => [
+                'class' => \MauticPlugin\MauticCustomizationBundle\Integration\MauticCustomizationIntegration::class,
+                'tags' => [
+                    'mautic.integration',
+                    'mautic.basic_integration',
+                ],
+            ],
+            'mauticcustomization.integration.configuration' => [
+                'class' => \MauticPlugin\MauticCustomizationBundle\Integration\Support\ConfigSupport::class,
+                'tags' => [
+                    'mautic.config_integration',
+                ],
+            ],
+        ],
         'command' => [],
         'models' => [],
         'forms' => [],
         'helpers' => [],
-        'other' => [],
+        'other' => [
+            'mautic.plugin.mauticcustomization.config' => [
+                'class' => \MauticPlugin\MauticCustomizationBundle\Integration\Config::class,
+                'arguments' => [
+                    'mautic.integrations.helper',
+                ],
+            ],
+        ],
     ],
     'parameters' => [],
 ];

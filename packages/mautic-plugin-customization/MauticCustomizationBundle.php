@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace MauticPlugin\MauticCustomizationBundle;
 
-use Mautic\PluginBundle\Bundle\PluginBundleBase;
+use Mautic\IntegrationsBundle\Bundle\AbstractPluginBundle;
 
-class MauticCustomizationBundle extends PluginBundleBase
+class MauticCustomizationBundle extends AbstractPluginBundle
 {
 }
