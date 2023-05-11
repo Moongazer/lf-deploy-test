@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8db123ce8b00ac617bc59763166f03c6",
+    "content-hash": "ee3da82c910cad4e57a6a13809b45b7b",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1211,6 +1211,54 @@
                 "source": "https://github.com/cweagans/composer-patches/tree/1.7.3"
             },
             "time": "2022-12-20T22:53:13+00:00"
+        },
+        {
+            "name": "diele/bounce-monitor",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Leuchtfeuer/mautic-bounce-monitor.git",
+                "reference": "daa76ec6f38f5a2259c811496c617a5097a1986c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Leuchtfeuer/mautic-bounce-monitor/zipball/daa76ec6f38f5a2259c811496c617a5097a1986c",
+                "reference": "daa76ec6f38f5a2259c811496c617a5097a1986c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-imap": "*",
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "php": "^7.4 < 8.1",
+                "php-imap/php-imap": "*",
+                "zarplata/zabbix-sender": "^1.0.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "./"
+                ],
+                "psr-4": {
+                    "MauticPlugin\\MauticBounceMonitorBundle\\": "",
+                    "Zarplata\\Zabbix\\": ""
+                }
+            },
+            "license": [
+                "GPL 2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Diele",
+                    "email": "d.diele@leuchtfeuer.com"
+                }
+            ],
+            "description": "Script which counts number of mails in specific folder and sends data to a Zabbix instance.",
+            "support": {
+                "source": "https://github.com/Leuchtfeuer/mautic-bounce-monitor/tree/1.1.0",
+                "issues": "https://github.com/Leuchtfeuer/mautic-bounce-monitor/issues"
+            },
+            "time": "2023-03-03T10:20:20+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -5242,6 +5290,297 @@
             }
         },
         {
+            "name": "leuchtfeuer/mautic-auth0-bundle",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Leuchtfeuer/auth0-for-mautic.git",
+                "reference": "6d979cf31d65227940376f82890aa2ee6d697aad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Leuchtfeuer/auth0-for-mautic/zipball/6d979cf31d65227940376f82890aa2ee6d697aad",
+                "reference": "6d979cf31d65227940376f82890aa2ee6d697aad",
+                "shasum": ""
+            },
+            "replace": {
+                "bitmotion/mautic-auth0-bundle": "self.version"
+            },
+            "type": "mautic-plugin",
+            "autoload": {
+                "psr-4": {
+                    "MauticPlugin\\MauticAuth0Bundle\\": ""
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Wessels",
+                    "email": "f.wessels@Leuchtfeuer.com",
+                    "homepage": "https://www.Leuchtfeuer.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Lukas Günther",
+                    "email": "l.guenther@Leuchtfeuer.com",
+                    "homepage": "https://www.Leuchtfeuer.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Auth0 is the solution you need for web, mobile, IoT, and internal applications. Loved by developers and trusted by enterprises.",
+            "homepage": "https://www.Leuchtfeuer.com",
+            "keywords": [
+                "Auth0",
+                "Login",
+                "Mautic",
+                "SSO",
+                "User"
+            ],
+            "support": {
+                "issues": "https://github.com/Leuchtfeuer/auth0-for-mautic/issues",
+                "source": "https://github.com/Leuchtfeuer/auth0-for-mautic",
+                "email": "dev@Leuchtfeuer.com"
+            },
+            "funding": [
+                {
+                    "type": "custom",
+                    "url": "https://www.Leuchtfeuer.com"
+                },
+                {
+                    "type": "github",
+                    "url": "https://github.com/flossels"
+                }
+            ],
+            "time": "2021-01-22T10:19:57+00:00"
+        },
+        {
+            "name": "leuchtfeuer/mautic-custom-url-parameters",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Leuchtfeuer/mautic-custom-url-parameters.git",
+                "reference": "bb9fdd68c5170e18ac2742820380713aaeba1f9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Leuchtfeuer/mautic-custom-url-parameters/zipball/bb9fdd68c5170e18ac2742820380713aaeba1f9a",
+                "reference": "bb9fdd68c5170e18ac2742820380713aaeba1f9a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "mautic/core-lib": "^3.0|^4.0",
+                "mautic/plugin-social": "*",
+                "php": "^7.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.4",
+                "phpunit/phpunit": "^9.5",
+                "symfony/browser-kit": "^5.4"
+            },
+            "type": "mautic-plugin",
+            "extra": {
+                "install-directory-name": "MauticCustomUrlParametersBundle"
+            },
+            "autoload": {
+                "psr-4": {
+                    "MauticPlugin\\MauticCustomUrlParametersBundle\\": ""
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "MauticPlugin\\MauticCustomUrlParametersBundle\\Tests\\": "Tests"
+                }
+            },
+            "scripts": {
+                "cs-fix": [
+                    "./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --using-cache no --show-progress dots -v"
+                ]
+            },
+            "license": [
+                "TODO"
+            ],
+            "description": "TODO",
+            "homepage": "https://www.Leuchtfeuer.com",
+            "support": {
+                "source": "https://github.com/Leuchtfeuer/mautic-custom-url-parameters/tree/1.0.1",
+                "issues": "https://github.com/Leuchtfeuer/mautic-custom-url-parameters/issues"
+            },
+            "time": "2023-03-03T09:11:28+00:00"
+        },
+        {
+            "name": "leuchtfeuer/mautic-customer-id-md5",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Leuchtfeuer/mautic-lehner-customerid-md5.git",
+                "reference": "89fb68b2aafb5f5da310fab4690241524e336b74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Leuchtfeuer/mautic-lehner-customerid-md5/zipball/89fb68b2aafb5f5da310fab4690241524e336b74",
+                "reference": "89fb68b2aafb5f5da310fab4690241524e336b74",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "mautic/core-lib": "^3.0|^4.0",
+                "mautic/plugin-social": "*",
+                "php": "^7.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.4",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "symfony/browser-kit": "^5.4"
+            },
+            "type": "mautic-plugin",
+            "extra": {
+                "install-directory-name": "MauticCustomerIdMd5Bundle"
+            },
+            "autoload": {
+                "psr-4": {
+                    "MauticPlugin\\MauticCustomerIdMd5Bundle\\": ""
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "MauticPlugin\\MauticCustomerIdMd5Bundle\\Tests\\": "Tests"
+                }
+            },
+            "scripts": {
+                "fix-cs": [
+                    "./vendor/bin/php-cs-fixer fix --show-progress dots -v"
+                ]
+            },
+            "license": [
+                "TODO"
+            ],
+            "description": "TODO",
+            "homepage": "https://www.Leuchtfeuer.com",
+            "support": {
+                "source": "https://github.com/Leuchtfeuer/mautic-lehner-customerid-md5/tree/1.0.0",
+                "issues": "https://github.com/Leuchtfeuer/mautic-lehner-customerid-md5/issues"
+            },
+            "time": "2023-03-03T09:49:39+00:00"
+        },
+        {
+            "name": "leuchtfeuer/mautic-housekeeping-bundle",
+            "version": "v1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Leuchtfeuer/mautic-housekeeping-bundle.git",
+                "reference": "d093ce8f94c9d46e11cfba73df7c0b85a7c32c64"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Leuchtfeuer/mautic-housekeeping-bundle/zipball/d093ce8f94c9d46e11cfba73df7c0b85a7c32c64",
+                "reference": "d093ce8f94c9d46e11cfba73df7c0b85a7c32c64",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "mautic/core-lib": "^3.0|^4.0",
+                "php": "^7.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.4",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "mautic-plugin",
+            "extra": {
+                "install-directory-name": "MauticHousekeepingBundle"
+            },
+            "autoload": {
+                "psr-4": {
+                    "MauticPlugin\\MauticHousekeepingBundle\\": ""
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "MauticPlugin\\MauticHousekeepingBundle\\Tests\\": "Tests"
+                }
+            },
+            "scripts": {
+                "cs-fix": [
+                    "./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --using-cache no --show-progress dots -v"
+                ]
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Leuchtfeuer Digital Marketing GmbH",
+                    "email": "mautic@Leuchtfeuer.com"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/Leuchtfeuer/mautic-housekeeping-bundle/tree/v1.4.1",
+                "issues": "https://github.com/Leuchtfeuer/mautic-housekeeping-bundle/issues"
+            },
+            "time": "2023-05-10T09:52:47+00:00"
+        },
+        {
+            "name": "leuchtfeuer/mautic-leh-boxalino-history-feed",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Leuchtfeuer/mautic-leh-BoxalinoHistoryFeed.git",
+                "reference": "25dcc2d40eef24d069db9c8b97b501d1222b418d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Leuchtfeuer/mautic-leh-BoxalinoHistoryFeed/zipball/25dcc2d40eef24d069db9c8b97b501d1222b418d",
+                "reference": "25dcc2d40eef24d069db9c8b97b501d1222b418d",
+                "shasum": ""
+            },
+            "type": "library",
+            "scripts": {
+                "test": [
+                    "@phpunit",
+                    "@csfixer"
+                ],
+                "quicktest": [
+                    "@unit",
+                    "@csfixer"
+                ],
+                "phpunit": [
+                    "../../bin/phpunit -d memory_limit=2048M --bootstrap ../../vendor/autoload.php --configuration phpunit.xml --fail-on-warning --testsuite=all"
+                ],
+                "unit": [
+                    "../../bin/phpunit -d memory_limit=2048M --bootstrap ../../vendor/autoload.php --configuration phpunit.xml --fail-on-warning --testsuite=unit"
+                ],
+                "functional": [
+                    "../../bin/phpunit -d memory_limit=2048M --bootstrap ../../vendor/autoload.php --configuration phpunit.xml --fail-on-warning --testsuite=functional"
+                ],
+                "coverage": [
+                    "../../bin/phpunit -d memory_limit=2048M --bootstrap ../../vendor/autoload.php --configuration phpunit.xml --fail-on-warning --testsuite=all --coverage-text --coverage-html=Tests/Coverage"
+                ],
+                "csfixer": [
+                    "../../bin/php-cs-fixer fix . -v --dry-run --diff --using-cache=no"
+                ],
+                "fixcs": [
+                    "../../bin/php-cs-fixer fix . -v --using-cache=no"
+                ]
+            },
+            "description": "Sync data to Boxalino History Feed.",
+            "keywords": [
+                "mautic",
+                "plugin"
+            ],
+            "support": {
+                "source": "https://github.com/Leuchtfeuer/mautic-leh-BoxalinoHistoryFeed/tree/1.0.0",
+                "issues": "https://github.com/Leuchtfeuer/mautic-leh-BoxalinoHistoryFeed/issues"
+            },
+            "time": "2023-04-04T07:23:56+00:00"
+        },
+        {
             "name": "leuchtfeuer/mautic-lehner-csv-importer",
             "version": "1.0.0",
             "source": {
@@ -5293,6 +5632,120 @@
                 "issues": "https://github.com/Leuchtfeuer/mautic-lehner-csv-importer/issues"
             },
             "time": "2023-05-11T08:26:28+00:00"
+        },
+        {
+            "name": "leuchtfeuer/mautic-lehner-sovendus-api",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Leuchtfeuer/mautic-lehner-sovendus-api.git",
+                "reference": "216be6a90d10e1d47fd5d408657706c1094103c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Leuchtfeuer/mautic-lehner-sovendus-api/zipball/216be6a90d10e1d47fd5d408657706c1094103c1",
+                "reference": "216be6a90d10e1d47fd5d408657706c1094103c1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "mautic/core-lib": "^3.0|^4.0",
+                "mautic/plugin-social": "*",
+                "php": "^7.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.4",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "symfony/browser-kit": "^5.4"
+            },
+            "type": "mautic-plugin",
+            "extra": {
+                "install-directory-name": "MauticLehnerSovendusApiBundle"
+            },
+            "autoload": {
+                "psr-4": {
+                    "MauticPlugin\\MauticLehnerSovendusApiBundle\\": ""
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "MauticPlugin\\MauticLehnerSovendusApiBundle\\Tests\\": "Tests"
+                }
+            },
+            "scripts": {
+                "fix-cs": [
+                    "./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --using-cache no --show-progress dots -v"
+                ]
+            },
+            "license": [
+                "TODO"
+            ],
+            "description": "TODO",
+            "homepage": "https://www.Leuchtfeuer.com",
+            "support": {
+                "source": "https://github.com/Leuchtfeuer/mautic-lehner-sovendus-api/tree/1.0.0",
+                "issues": "https://github.com/Leuchtfeuer/mautic-lehner-sovendus-api/issues"
+            },
+            "time": "2023-03-23T14:14:30+00:00"
+        },
+        {
+            "name": "leuchtfeuer/mautic-multiselect-handling",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Leuchtfeuer/mautic-multiselect-handling-bundle.git",
+                "reference": "9d5623cc797cc19bd9320190b719611b70b6f978"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Leuchtfeuer/mautic-multiselect-handling-bundle/zipball/9d5623cc797cc19bd9320190b719611b70b6f978",
+                "reference": "9d5623cc797cc19bd9320190b719611b70b6f978",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "mautic/core-lib": "^4.0",
+                "mautic/plugin-social": "*",
+                "php": "^7.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.4",
+                "phpunit/phpunit": "^9.5",
+                "symfony/browser-kit": "^5.4"
+            },
+            "type": "mautic-plugin",
+            "extra": {
+                "install-directory-name": "MauticMultiselectHandlingBundle"
+            },
+            "autoload": {
+                "psr-4": {
+                    "MauticPlugin\\MauticMultiselectHandlingBundle\\": ""
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "MauticPlugin\\MauticMultiselectHandlingBundle\\Tests\\": "Tests"
+                }
+            },
+            "scripts": {
+                "cs-fix": [
+                    "./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --using-cache no --show-progress dots -v"
+                ]
+            },
+            "license": [
+                "TODO"
+            ],
+            "description": "TODO",
+            "homepage": "https://www.Leuchtfeuer.com",
+            "support": {
+                "source": "https://github.com/Leuchtfeuer/mautic-multiselect-handling-bundle/tree/1.2.1",
+                "issues": "https://github.com/Leuchtfeuer/mautic-multiselect-handling-bundle/issues"
+            },
+            "time": "2023-03-03T09:38:24+00:00"
         },
         {
             "name": "lightsaml/lightsaml",
@@ -6115,6 +6568,41 @@
                 }
             ],
             "time": "2023-01-17T17:10:42+00:00"
+        },
+        {
+            "name": "mautic/plugin-CustomNavigationLinksBundle",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TornMarketing/Mautic-Custom-Navlinks.git",
+                "reference": "43d6674f978fb3ab0805d4b59be82dba79045096"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TornMarketing/Mautic-Custom-Navlinks/zipball/43d6674f978fb3ab0805d4b59be82dba79045096",
+                "reference": "43d6674f978fb3ab0805d4b59be82dba79045096",
+                "shasum": ""
+            },
+            "require": {
+                "mautic/core-lib": "^4.0",
+                "php": ">=7.4.0 <8.1"
+            },
+            "default-branch": true,
+            "type": "mautic-plugin",
+            "extra": {
+                "install-directory-name": "CustomNavigationLinksBundle"
+            },
+            "description": "Custom Navigation Links Plugin",
+            "keywords": [
+                "integration",
+                "mautic",
+                "plugin"
+            ],
+            "support": {
+                "source": "https://github.com/TornMarketing/Mautic-Custom-Navlinks/tree/main",
+                "issues": "https://github.com/TornMarketing/Mautic-Custom-Navlinks/issues"
+            },
+            "time": "2022-09-30T00:16:14+00:00"
         },
         {
             "name": "mautic/plugin-citrix",
@@ -8636,6 +9124,76 @@
                 "source": "https://github.com/php-http/promise/tree/1.1.0"
             },
             "time": "2020-07-07T09:29:14+00:00"
+        },
+        {
+            "name": "php-imap/php-imap",
+            "version": "5.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barbushin/php-imap.git",
+                "reference": "94107fdd1383285459a7f6c2dd2f39e25a1b8373"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barbushin/php-imap/zipball/94107fdd1383285459a7f6c2dd2f39e25a1b8373",
+                "reference": "94107fdd1383285459a7f6c2dd2f39e25a1b8373",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "ext-iconv": "*",
+                "ext-imap": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.4",
+                "maglnet/composer-require-checker": "^2.0|^3.2",
+                "nikic/php-parser": "^4.3,<4.7|^4.10",
+                "paragonie/hidden-string": "^1.0",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpunit/phpunit": "^8.5|^9.5",
+                "povils/phpmnd": "^2.2",
+                "psalm/plugin-phpunit": "^0.10.0|^0.15.1",
+                "roave/security-advisories": "dev-master",
+                "sebastian/phpcpd": "^4.1|^6.0"
+            },
+            "suggest": {
+                "ext-fileinfo": "To facilitate IncomingMailAttachment::getFileInfo() auto-detection"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpImap\\": "src/PhpImap"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Barbushin",
+                    "email": "barbushin@gmail.com",
+                    "homepage": "http://linkedin.com/in/barbushin"
+                }
+            ],
+            "description": "Manage mailboxes, filter/get/delete emails in PHP (supports IMAP/POP3/NNTP)",
+            "homepage": "https://github.com/barbushin/php-imap",
+            "keywords": [
+                "imap",
+                "mail",
+                "mailbox",
+                "php",
+                "pop3",
+                "receive emails"
+            ],
+            "support": {
+                "issues": "https://github.com/barbushin/php-imap/issues",
+                "source": "https://github.com/barbushin/php-imap/tree/5.0.1"
+            },
+            "time": "2022-12-05T15:47:03+00:00"
         },
         {
             "name": "phpoffice/phpspreadsheet",
@@ -15835,6 +16393,46 @@
                 "source": "https://github.com/willdurand/Negotiation/tree/3.1.0"
             },
             "time": "2022-01-30T20:08:53+00:00"
+        },
+        {
+            "name": "zarplata/zabbix-sender",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zarplata/zabbix-sender-php.git",
+                "reference": "03134ff7eabbf179e4d94596beefae516ad1ca6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zarplata/zabbix-sender-php/zipball/03134ff7eabbf179e4d94596beefae516ad1ca6a",
+                "reference": "03134ff7eabbf179e4d94596beefae516ad1ca6a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-sockets": "*",
+                "php": "^7.0 || ^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Zarplata\\Zabbix\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Platonov Andrey",
+                    "email": "a.platonov@office.ngs.ru"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/zarplata/zabbix-sender-php/issues",
+                "source": "https://github.com/zarplata/zabbix-sender-php/tree/1.0.3"
+            },
+            "time": "2021-04-02T07:14:21+00:00"
         }
     ],
     "packages-dev": [
@@ -18449,7 +19047,8 @@
         "lehner/mautic-plugin-customization": 20,
         "lehner/mautic-scaffold": 20,
         "mautic/core-composer-scaffold": 20,
-        "mautic/core-project-message": 20
+        "mautic/core-project-message": 20,
+        "mautic/plugin-customnavigationlinksbundle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

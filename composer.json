@@ -28,7 +28,34 @@
 			"url": "https://github.com/mautic/FOSOAuthServerBundle.git"
 		}, {
 			"type": "vcs",
+			"url": "git@github.com:Leuchtfeuer/mautic-leh-BoxalinoHistoryFeed.git"
+		}, {
+			"type": "vcs",
+			"url": "git@github.com:TornMarketing/Mautic-Custom-Navlinks.git"
+		}, {
+			"type": "vcs",
+			"url": "git@github.com:Leuchtfeuer/auth0-for-mautic.git"
+		}, {
+			"type": "vcs",
+			"url": "git@github.com:Leuchtfeuer/mautic-bounce-monitor.git"
+		}, {
+			"type": "vcs",
+			"url": "git@github.com:Leuchtfeuer/mautic-lehner-customerid-md5.git"
+		}, {
+			"type": "vcs",
+			"url": "git@github.com:Leuchtfeuer/mautic-custom-url-parameters.git"
+		}, {
+			"type": "vcs",
+			"url": "git@github.com:Leuchtfeuer/mautic-housekeeping-bundle.git"
+		}, {
+			"type": "vcs",
 			"url": "git@github.com:Leuchtfeuer/mautic-lehner-csv-importer.git"
+		}, {
+			"type": "vcs",
+			"url": "git@github.com:Leuchtfeuer/mautic-lehner-sovendus-api.git"
+		}, {
+			"type": "vcs",
+			"url": "git@github.com:Leuchtfeuer/mautic-multiselect-handling-bundle.git"
 		}, {
 			"type": "path",
 			"url": "./packages/*",
@@ -38,9 +65,17 @@
 	"require": {
 		"composer/installers": "^1.11",
 		"cweagans/composer-patches": "^1",
+		"diele/bounce-monitor": "^1.1",
 		"lehner/mautic-plugin-customization": "dev-main",
 		"lehner/mautic-scaffold": "dev-main",
+		"leuchtfeuer/mautic-auth0-bundle": "^1.1",
+		"leuchtfeuer/mautic-custom-url-parameters": "^1.0",
+		"leuchtfeuer/mautic-customer-id-md5": "^1.0",
+		"leuchtfeuer/mautic-housekeeping-bundle": "*",
+		"leuchtfeuer/mautic-leh-boxalino-history-feed": "^1.0",
 		"leuchtfeuer/mautic-lehner-csv-importer": "^1.0",
+		"leuchtfeuer/mautic-lehner-sovendus-api": "^1.0",
+		"leuchtfeuer/mautic-multiselect-handling": "^1.2",
 		"mautic/core-composer-scaffold": "4.x-dev",
 		"mautic/core-lib": "^4.4",
 		"mautic/core-project-message": "4.x-dev",
@@ -49,6 +84,7 @@
 		"mautic/plugin-clearbit": "^4.4",
 		"mautic/plugin-cloudstorage": "^4.4",
 		"mautic/plugin-crm": "^4.4",
+		"mautic/plugin-customnavigationlinksbundle": "dev-main",
 		"mautic/plugin-emailmarketing": "^4.4",
 		"mautic/plugin-focus": "^4.4",
 		"mautic/plugin-fullcontact": "^4.4",
