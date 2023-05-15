@@ -1,0 +1,6 @@
+hosts:
+  testphp74:
+    hostname: 'testphp74.office.leuchtfeuer.com'
+    remote_user: 'zirpel'
+    port: 22
+    deploy_path: '/var/www/zirpel/mautic-deploy-test.zirpel.testphp74'
