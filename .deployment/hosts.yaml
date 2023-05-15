@@ -1,6 +1,13 @@
 hosts:
-  testphp74:
+  testphp74zirpel:
     hostname: 'testphp74.office.leuchtfeuer.com'
     remote_user: 'zirpel'
     port: 22
     deploy_path: '/var/www/zirpel/mautic-deploy-test.zirpel.testphp74'
+
+  testphp74jenkins:
+    hostname: '217.91.35.16'
+    user: www-data-deploy
+    port: 20038
+    deploy_path: '/var/www/zirpel/mautic-deploy-test.zirpel.testphp74'
+    stage: testing
