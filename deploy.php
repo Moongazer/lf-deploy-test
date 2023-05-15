@@ -6,6 +6,7 @@ namespace Deployer;
 
 // include base recipes
 require 'recipe/symfony.php';
+require 'contrib/rsync.php';
 
 // include hosts
 import('.deployment/hosts.yaml');
@@ -40,7 +41,7 @@ set('writable_dirs', [
 ]);
 
 // define all rsync excludes
-/*$exclude = [
+$exclude = [
     // OS specific files
     '.DS_Store',
     'Thumbs.db',
@@ -62,28 +63,19 @@ set('writable_dirs', [
     '/.build',
     '/.deployment',
     '/var',
-];*/
+];
 
 // define rsync options
-/*set('rsync', [
-    'exclude' => array_merge($sharedDirectories, $sharedFiles, $exclude),
-    'exclude-file' => false,
-    'include' => [],
-    'include-file' => false,
-    'filter' => [],
-    'filter-file' => false,
-    'filter-perdir' => false,
-    'flags' => 'az',
-    'options' => ['delete'],
-    'timeout' => 300,
-]);
-set('rsync_src', './');*/
+$defaultRsync = get('rsync');
+$defaultRsync['exclude'] = array_merge($sharedDirectories, $sharedFiles, $exclude, $defaultRsync['exclude']);
+set('rsync', $defaultRsync);
+set('rsync_src', './');
 
-// Use rsync to update code during deployment
-/*task('deploy:update_code', function () {
+// use rsync to update code during deployment
+task('deploy:update_code', function () {
     invoke('rsync:warmup');
     invoke('rsync');
-});*/
+});
 
 after('deploy:symlink', function () {
     invoke('deploy:cache:clear');
