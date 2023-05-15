@@ -65,6 +65,7 @@
 	"require": {
 		"composer/installers": "^1.11",
 		"cweagans/composer-patches": "^1",
+		"deployer/deployer": "^7.3",
 		"diele/bounce-monitor": "^1.1",
 		"lehner/mautic-plugin-customization": "dev-main",
 		"lehner/mautic-scaffold": "dev-main",
@@ -116,7 +117,6 @@
 		"mautic/theme-vibrant": "^4.4"
 	},
 	"require-dev": {
-		"deployer/deployer": "^7.3",
 		"friendsofphp/php-cs-fixer": "^2.19.2",
 		"http-interop/http-factory-guzzle": "^1.0",
 		"liip/functional-test-bundle": "^4.2",
