@@ -1,11 +1,17 @@
+.base: &base
+  port: 22
+  identityFile: /var/lib/jenkins/.ssh/id_rsa
+  stage: production
+
 hosts:
   testphp74zirpel:
     hostname: 'testphp74.office.leuchtfeuer.com'
     remote_user: 'zirpel'
-    port: 22
     deploy_path: '/var/www/zirpel/mautic-deploy-test.zirpel.testphp74'
+    stage: testing
 
   testphp74jenkins:
+    <<: *base
     hostname: '217.91.35.16'
     user: www-data-deploy
     port: 20038
