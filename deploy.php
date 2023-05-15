@@ -6,7 +6,6 @@ namespace Deployer;
 
 // include base recipes
 require 'recipe/symfony.php';
-require 'contrib/cachetool.php';
 
 // include hosts
 import('.deployment/hosts.yaml');
@@ -88,7 +87,6 @@ set('rsync_src', './');*/
 
 after('deploy:symlink', function () {
     invoke('deploy:cache:clear');
-    invoke('cachetool:clear:opcache');
 });
 
 // unlock on failed deployment
